@@ -18,7 +18,9 @@ Just another aggregating politicians to call while you're in the bathroom websit
 ## Websites that have lists of issues to call about to initialize a prototype of the site:
 
 http://jenniferhofmann.com/home/weekly-action-checklist-democrats-independents-republicans-conscience/
+
 http://www.weekly-resistance.online/
+
 http://thesixtyfive.org/weeklyCTA
 
 
