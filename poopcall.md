@@ -49,3 +49,12 @@ Here is a list of talking points you can make when calling [name of politician]:
 * Hi, I'm  ____name____.
 * [talking points applicable for this congressperson/issue]
 * But we're not going to take this shit sitting down.
+
+Before we wrap up, how'd the call go?
+How long did they put you on hold? [dropdown]
+Did you talk to the politician or to a staffer? [dropdown]
+Do you want us to contact with you with further updates about this issue? Email: _____________
+
+Share this call: <button>#swampthedrains</button>
+
+And wash your hands! Politics is dirty business.
