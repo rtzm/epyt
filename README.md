@@ -3,11 +3,10 @@ Just another aggregating politicians to call while you're in the bathroom websit
 
 ## to-do
 * make a first release that features a couple of key nominations, votes, and issues to call about at the federal level, and allows people to quickly call those people.
-  * figure out data structure for holding these
   * gather a list of nominations, votes, and issues to call about
+    * pull in some using json request to ProPublic Congress API or Sunlight Congress API?
   * figure out the easiest (for users) way to link people to their politicians
-    * direct to this webpage:http://act.commoncause.org/site/PageServer?pagename=sunlight_advocacy_list_page?
-    * Pull in from another using the Sunlight Congress API?
+    * pull in using json request to ProPublic Congress API or Sunlight Congress API?
   * write up some copy and frontmatter for the site, poop-themed.
   * make it into a nice basic website with these pages:
     * front page (currently poopcall.md) to get people calling
