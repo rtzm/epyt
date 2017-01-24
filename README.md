@@ -14,7 +14,10 @@ Just another aggregating politicians to call while you're in the bathroom websit
 
 ## List of initial nominations, votes, and issues to call about for the first version of the site.
 
-... more to come ...
+Find a website that already has some of this info compiled and pull some inital actions steps from that site.
+* Besty DeVos
+* Rex Tillerson
+* ... more to come ...
 
 ## Other Potential site features:
 * front page is an aggregated list of current outrages going on today, designed specifically for mobile
