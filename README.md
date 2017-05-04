@@ -2,6 +2,29 @@
 Just another aggregating politicians to call while you're in the bathroom website
 
 
+## User Stories
+
+### MVP
+As a user, I want to...
+
+* see a homepage with a list of upcoming votes, bills, and nominations (issues)
+* click on a specific issue and see some options: short details about the issue; links to propublica information about the bill (e.g. https://projects.propublica.org/represent/bills/115/hr1180); links to call pages for: someone randomly in favor of or opposed to that issue, or your local congressperson about that issue; info about how many people are calling right now or have called about that issue
+* start a call by visiting a call page for a specific congressperson that gives me their information (briefly), a sample script if I need one, and that congressperson's phone number as a button.
+* visit a "reflection" page after I call, which will ask me to report on how the call and how the poop went.
+
+### Stretch stories
+As a user, I want to...
+
+* Get a link for more information about the issue (external, or maybe from an API call), about a specific issue on the issue page
+* See a politician's tweets about an issue, or other examples of their stance
+* target polticians based on their stance.
+
+* I want my cursor to be a poop emoki
+
+* use ruby gem "whenever" and rake task to run once a day to get updated issues and politicians and votes
+  * put code in class or module, then put that into a rake task, then feed that into whenever
+* add twelve-column css framework for mobile
+
 ## APIs to use
 
 ### Core APIs
@@ -11,6 +34,7 @@ https://developers.google.com/civic-information/
 
 ProPublica Congress API (formerly Sunlight) - find upcoming bills, nominations
 https://propublica.github.io/congress-api-docs
+https://www.propublica.org/about/propublica-data-terms-of-use
 
 ### Stretch APIs
 
