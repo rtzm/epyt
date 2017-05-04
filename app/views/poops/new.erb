@@ -1,0 +1,14 @@
+<div>How do I persist data about the issue they just clicked? Maybe session cookies?</div>
+
+<div>
+  <p>You're about to call <%= @politician.full_name %></p>
+  Here's their number
+<a href="tel:<%= @politician.phone %>"><%= @politician.phone %></a>
+Let it all out.
+
+<div>
+  sample script:
+Hi, I'm  ____name____<%= " and I live in your district" if @local %>.
+
+[more info here]
+But we're not going to take this shit sitting down.
