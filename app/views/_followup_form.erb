@@ -1,19 +1,31 @@
+<p>There are no clean hands in politics.</p>
+<p>Now that you've called, please fill out this form.</p>
+<%= erb :_errors %>
 <div class="followup-form">
-  <form class="followup" method="put" action="/issues/<%= @issue.id %>/politicians/<%= @politician.id %>/poops/<%= @poop.id %>">
+  <form class="followup" method="post" action="/issues/<%= @issue.id %>/politicians/<%= @politician.id %>/poops/<%= @poop.id %>">
     <input type="hidden" name="_method" value="put">
-    Before we wrap up, how'd the call go?
-    How long did they put you on hold? [dropdown]
-    Did you talk to the politician or to a staffer? [dropdown]
-    Do you want to be texted or emailed with the results of this vote?
-    Email:
-    phone for texting:
+    <div class="form-field">
+      <label>How many minutes was the call?</label>
+      <input type="number" name="poop[call_time]">
+    </div>
+    <div class="form-field">
+      <label>How many minutes were you on hold?</label>
+      <input type="number" name="poop[on_hold_time]">
+    </div>
+    <div class="form-field">
+      <label>Did you talk to the politician her/himself or to a staffer or voicemail?</label>
+      <input type="radio" name="poop[spoke_directly]" value="true"> Politician
+      <input type="radio" name="poop[spoke_directly]" value="false"> Staffer or voicemail
+    </div>
+    <div>If you want to be texted or emailed after this vote happens, please enter your email and/or phone number below.</div>
+    <div class="form-field">
+      <label>Email:</label>
+      <input type="email" name="followup[email]">
+    </div>
+    <div class="form-field">
+      <label>Phone for texting:</label>
+      <input type="phone" name="followup[phone]">
+    </div>
+    <input type="submit" name="submit" value="Submit feedback">
   </form>
 </div>
-
-
-
-
-after form submission:
-Share this call: <button>#swampthedrains</button>
-
-And wash your hands! Politics is dirty business.

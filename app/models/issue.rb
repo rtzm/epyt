@@ -14,4 +14,8 @@ class Issue < ActiveRecord::Base
       })
     end
   end
+
+  def display_legislative_day
+    legislative_day.strftime("%a %b %-d")
+  end
 end

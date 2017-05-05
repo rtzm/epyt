@@ -19,3 +19,9 @@ get "/issues/:issue_id/politicians/rep" do
   politician = Politician.random_from_party("R")
   redirect "/issues/#{params[:issue_id]}/politicians/#{politician.id}/poops/new"
 end
+
+get "/issues/:issue_id/politicians/:politician_id" do
+  # show page for this politician getting poopcalls, and a share button
+  @politician = Politician.find(params[:politician_id])
+  erb :"politicians/show"
+end

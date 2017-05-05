@@ -1,5 +1,6 @@
 <div class="poop-new">
   <div>
+    <%= erb :_errors %>
     <p>You're about to call <%= @politician.full_name %> about <%= @issue.bill_number.upcase %></p>
     Here's their number
   <a data-issue-id="<%= @issue.id %>" data-politician-id="<%= @politician.id %>" class="call-button button" href="tel:<%= @politician.phone %>"><%= @politician.phone %></a>

@@ -9,6 +9,7 @@ As a user, I want to...
 
 * see a homepage with a list of upcoming votes, bills, and nominations (issues)
 * click on a specific issue and see some options: short details about the issue; links to propublica information about the bill (e.g. https://projects.propublica.org/represent/bills/115/hr1180); links to call pages for: someone randomly in favor of or opposed to that issue, or your local congressperson about that issue; info about how many people are calling right now or have called about that issue
+* I want to be able to call my local politician about an issue by clicking the local button
 * start a call by visiting a call page for a specific congressperson that gives me their information (briefly), a sample script if I need one, and that congressperson's phone number as a button.
 * visit a "reflection" page after I call, which will ask me to report on how the call and how the poop went.
 
