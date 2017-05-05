@@ -6,7 +6,6 @@ class CreatePoops < ActiveRecord::Migration
       t.integer  :call_time
       t.integer  :on_hold_time
       t.boolean  :spoke_directly
-      t.integer  :followup_id
 
       t.timestamps(null: false)
     end

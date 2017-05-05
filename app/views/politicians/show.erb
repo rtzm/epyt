@@ -1,0 +1,8 @@
+Here are the ten most recent poops directed at this politician, if you want to pile on:
+<% @politician.poops.order(created_at: :desc).limit(10).each do |poop| %>
+  <ul>
+    <li><%= poop.minutes_ago %> - <a href="/issues/<%= poop.issue.id %>/politicians/<%= @politician.id %>/poops/new"><%= poop.issue.bill_number %></a> - <%= poop.issue.description %></li>
+  </ul>
+<% end %>
+
+Or share with your friends that you made this call while pooping and want them to make one too: <button>#swampthedrains</button>

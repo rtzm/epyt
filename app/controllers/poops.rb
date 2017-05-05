@@ -46,10 +46,19 @@ put '/issues/:issue_id/politicians/:politician_id/poops/:id' do
   # update
   @poop = Poop.find(params[:id])
   @poop.assign_attributes(params[:poop])
-  if @poop.save
-    redirect "/poops#{@poop.id}"
+  unless params[:followup][:email].empty? && params[:followup][:phone].empty?
+    @followup = Followup.new(params[:followup])
+    @followup.poop = @poop
+    @followup.completed = false
+  end
+  no_errors = @poop.save
+  no_errors = no_errors && @followup.save if defined? @followup
+  if no_errors
+    redirect "/issues/#{params[:issue_id]}/politicians/#{params[:politician_id]}"
   else
     # errors
+    @errors = @poop.errors.full_messages
+    @errors += @followup.errors.full_messages if defined? @followup
     erb :'poops/edit'
   end
 end

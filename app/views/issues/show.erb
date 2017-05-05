@@ -16,12 +16,13 @@
   <div class="call-options">
     Call while pooping:
     <ul>
+      <li><a href="/issues/<%= @issue.id %>/politicians">one of the politicians who has already been called about this issue</a></li>
       <li><a href="/issues/<%= @issue.id %>/politicians/dem">a random Democrat</a></li>
       <li><a href="/issues/<%= @issue.id %>/politicians/rep">a random Republican</a></li>
       <li><a href="/issues/<%= @issue.id %>/politicians/local">your local congressperson</a></li>
     </ul>
   </div>
   <div class="poop-details">
-    TK TK: info about how many people are calling right now or have called about that issue
+    <%= erb :"politicians/_politicians_called" %>
   </div>
 </div>

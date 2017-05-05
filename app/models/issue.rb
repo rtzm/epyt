@@ -1,5 +1,6 @@
 class Issue < ActiveRecord::Base
   has_many :poops
+  has_many :politicians_called, through: :poops, source: :politician
 
   def self.create_many_from_json(jsons)
     # create Issue objects and save them to database
@@ -13,5 +14,9 @@ class Issue < ActiveRecord::Base
         range:            issue_json["range"]
       })
     end
+  end
+
+  def display_legislative_day
+    legislative_day.strftime("%a %b %-d")
   end
 end

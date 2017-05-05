@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lemon');
+
+body {
+  background-color: #795548;
+  color: #d8d8d8;
+}
+header, main {
+  margin: 0 auto;
+  width: 720px;
+}
+
+header {
+  font-family: 'Lemon', cursive;
+  text-align: center;
+}
+header a {
+  color: #d8d8d8;
+  text-decoration: none;
+}
+header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  color: #d8d8d8;
+}
+
+a:hover {
+  color: #fff;
+}

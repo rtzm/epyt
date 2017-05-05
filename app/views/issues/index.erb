@@ -1,6 +1,6 @@
 <div class="issues-list">
   <p>Give a shit.</p>
   <% @issues.each do |issue| %>
-    <p><%= issue.legislative_day.strftime("%a %b %-d") %> - <a href="/issues/<%= issue.id %>"><%= issue.bill_number %></a> will be voted in the <%= issue.chamber %>: <%= issue.description %></p>
+    <p><%= issue.display_legislative_day %> - <a href="/issues/<%= issue.id %>"><%= issue.bill_number %></a> will be voted in the <%= issue.chamber %>: <%= issue.description %></p>
   <% end %>
 </div>
