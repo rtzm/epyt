@@ -1,10 +1,1 @@
-Here are the politicians who have already gotten calls about <%= @issue.bill_number.upcase %>, if you want to pile on:
-<% if @issue.politicians_called.empty? %>
-  <p>Nobody has called this politician about this issue yet. <a href="/issues/<%= @issue.id %>">Be number one while you number two.</a></p>
-  <% else %>
-  <% @issue.politicians_called.uniq.each do |politician| %>
-    <ul>
-      <li><%= politician.poops.last.minutes_ago %> - <a href="/issues/<%= @issue.id %>/politicians/<%= politician.id %>/poops/new"><%= politician.full_name %></a></li>
-    </ul>
-  <% end %>
-<% end %>
+<%= erb :"politicians/_politicians_called" %>

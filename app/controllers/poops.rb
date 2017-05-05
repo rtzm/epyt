@@ -49,6 +49,7 @@ put '/issues/:issue_id/politicians/:politician_id/poops/:id' do
   unless params[:followup][:email].empty? && params[:followup][:phone].empty?
     @followup = Followup.new(params[:followup])
     @followup.poop = @poop
+    @followup.completed = false
   end
   no_errors = @poop.save
   no_errors = no_errors && @followup.save if defined? @followup

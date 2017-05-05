@@ -4,6 +4,7 @@ class CreateFollowups < ActiveRecord::Migration
       t.integer  :poop_id
       t.string   :phone
       t.string   :email
+      t.boolean  :completed
 
       t.timestamps(null: false)
     end
