@@ -46,7 +46,6 @@ put '/issues/:issue_id/politicians/:politician_id/poops/:id' do
   # update
   @poop = Poop.find(params[:id])
   @poop.assign_attributes(params[:poop])
-  binding.pry
   unless params[:followup][:email].empty? && params[:followup][:phone].empty?
     @followup = Followup.new(params[:followup])
     @followup.poop = @poop

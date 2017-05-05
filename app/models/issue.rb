@@ -1,5 +1,6 @@
 class Issue < ActiveRecord::Base
   has_many :poops
+  has_many :politicians_called, through: :poops, source: :politician
 
   def self.create_many_from_json(jsons)
     # create Issue objects and save them to database
