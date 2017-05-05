@@ -1,14 +1,16 @@
-<div>How do I persist data about the issue they just clicked? Maybe session cookies?</div>
+<div class="poop-new">
+  <div>
+    <p>You're about to call <%= @politician.full_name %> about <%= @issue.bill_number.upcase %></p>
+    Here's their number
+  <a data-issue-id="<%= @issue.id %>" data-politician-id="<%= @politician.id %>" class="call-button button" href="tel:<%= @politician.phone %>"><%= @politician.phone %></a>
+  Let it all out.
 
-<div>
-  <p>You're about to call <%= @politician.full_name %></p>
-  Here's their number
-<a href="tel:<%= @politician.phone %>"><%= @politician.phone %></a>
-Let it all out.
+  <div>
+    sample script:
+  Hi, I'm  ____name____<%= " and I live in your district" if @local %>.
 
-<div>
-  sample script:
-Hi, I'm  ____name____<%= " and I live in your district" if @local %>.
+  [more info here]
+  But we're not going to take this shit sitting down.
 
-[more info here]
-But we're not going to take this shit sitting down.
+  make a splash
+</div>

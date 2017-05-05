@@ -1,7 +1,21 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+var postPoop = function(event) {
+  console.log(this)
+  var issueId = $(this).data().issueId;
+  var politicianId = $(this).data().politicianId;
+  var url = "/issues/" + issueId + "/politicians/" + politicianId + "/poops"
+  $.ajax({
+    url: url,
+    type: 'POST'
+  })
+  .done(function(response) {
+    $(".poop-new").html(response)
+  })
+  .fail(function(request) {
+    // TODO: error handling?
+    alert(request.body);
+  });
+}
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+$(document).ready(function() {
+  $(".call-button").on('click', postPoop);
 });

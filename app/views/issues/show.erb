@@ -1,4 +1,5 @@
-<dl class="issue-details">
+<div class="issue-show">
+  <dl class="issue-details">
     <dt>Number:</dt>
     <dd><%= @issue.bill_number.upcase %></dd>
     <dt>Description:</dt>
@@ -11,15 +12,16 @@
     <dd><%= @issue.chamber.capitalize %></dd>
     <dt>For more info:</dt>
     <dd><a href="https://projects.propublica.org/represent/bills/<%= "#{@issue.congress_number}/#{@issue.bill_number}" %>">ProPublica Represent page for this bill</a></dd>
-</dl>
-<div class="call-options">
-  Call while pooping:
-  <ul>
-    <li><a href="/poops/new?politician=D">a random Democrat</a></li>
-    <li><a href="/poops/new?politician=R">a random Republican</a></li>
-    <li><a href="/poops/new?politician=local">your local congressperson</a></li>
-  </ul>
-</div>
-<div class="poop-details">
-  TK TK: info about how many people are calling right now or have called about that issue
+  </dl>
+  <div class="call-options">
+    Call while pooping:
+    <ul>
+      <li><a href="/issues/<%= @issue.id %>/politicians/dem">a random Democrat</a></li>
+      <li><a href="/issues/<%= @issue.id %>/politicians/rep">a random Republican</a></li>
+      <li><a href="/issues/<%= @issue.id %>/politicians/local">your local congressperson</a></li>
+    </ul>
+  </div>
+  <div class="poop-details">
+    TK TK: info about how many people are calling right now or have called about that issue
+  </div>
 </div>

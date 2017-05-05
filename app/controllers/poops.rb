@@ -1,30 +1,37 @@
-get'/poops/new' do
+get "/issues/:issue_id/politicians/:politician_id/poops" do
+  # TODO: show all poop calls for this politician about this issue
+end
+
+get'/issues/:issue_id/politicians/:politician_id/poops/new' do
   # new
-  # TODO create this
-  if params[:politician] == "local"
-    # get politician using google civic data api
-    @politician = Politician.new
-    @local = true
-  else
-    @politician = Politician.random_from_party(params[:politician])
-  end
+  @issue = Issue.find(params[:issue_id])
+  @politician = Politician.find(params[:politician_id])
   erb :'poops/new'
 end
 
-post '/poops' do
+post '/issues/:issue_id/politicians/:politician_id/poops' do
   # create
-  # make this upon clicking the call button?
-  # how do I make this a link as well as a form button?
-  @poop = Poop.new(params[:poop])
+  @issue = Issue.find(params[:issue_id])
+  @politician = Politician.find(params[:politician_id])
+  @poop = Poop.new(politician: @politician, issue: @issue)
   if @poop.save
-    redirect "/poops/#{@poop.id}/edit"
+    if request.xhr?
+      erb :_followup_form, layout: false
+    else
+      # redirect to issue page for them to make another call
+      redirect "/issues/#{@issue.id}"
+    end
   else
-    # errors
-    erb :'poops/new'
+    if request.xhr?
+      @poop.errors.full_messages
+    else
+      @errors = @poop.errors.full_messages
+      erb :'poops/new'
+    end
   end
 end
 
-get '/poops/:id/edit' do
+get '/issues/:issue_id/politicians/:politician_id/poops/:id/edit' do
   # edit
   if (@poop = Poop.find(params[:id]))
     erb :'poops/edit'
@@ -35,9 +42,8 @@ get '/poops/:id/edit' do
   end
 end
 
-put '/poops/:id' do
+put '/issues/:issue_id/politicians/:politician_id/poops/:id' do
   # update
-  # check authorization?
   @poop = Poop.find(params[:id])
   @poop.assign_attributes(params[:poop])
   if @poop.save
