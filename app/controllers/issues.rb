@@ -3,8 +3,8 @@ get '/issues' do
   erb :'issues/index'
 end
 
-get '/issues/:id' do
-  if (@issue = Issue.find(params[:id]))
+get '/issues/:issue_id' do
+  if (@issue = Issue.find(params[:issue_id]))
     erb :'issues/show'
   end
 end
