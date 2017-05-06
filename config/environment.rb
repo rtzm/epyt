@@ -47,5 +47,3 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
-
-GOOGLE_API_KEY = "AIzaSyClko8JDCzlC2VJIN5BU4VZDjsmcq_Ln5I"
