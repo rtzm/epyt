@@ -1,31 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Lemon');
+@import url('https://fonts.googleapis.com/css?family=Lemon|Open+Sans');
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 
 body {
-  background-color: #795548;
-  color: #d8d8d8;
+  background-color: #c2c2c2;
+  color: #434343;
+  font-family: 'Open Sans', sans-serif;
 }
+
 header, main {
   margin: 0 auto;
-  width: 720px;
+  width: 600px;
 }
 
 header {
-  font-family: 'Lemon', cursive;
   text-align: center;
 }
 header a {
-  color: #d8d8d8;
+  font-family: 'Lemon', cursive;
+  color: #795548;
   text-decoration: none;
 }
 header a:hover {
-  color: #fff;
+  color: #434343;
   text-decoration: none;
 }
 
 a {
-  color: #d8d8d8;
+  color: #434343;
 }
 
 a:hover {
-  color: #fff;
+  color: #795548;
+}
+
+@media screen and (max-width: 599px) {
+  header, main {
+    width: 100%;
+  }
 }

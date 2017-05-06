@@ -148,4 +148,36 @@ begin
 rescue LoadError
 end
 
+namespace :populate do
+  desc "Pull upcoming issues from API"
+  task :issues do
+    puts "Pulling issues from API..."
+    Populator.populate(:issues)
+  end
+
+  desc "Pull politician info from API"
+  task :politicians do
+    puts "Pulling politician info from API..."
+    Populator.populate(:politicians)
+  end
+
+  desc "Pull recent votes from API"
+  task :votes do
+    puts "Pulling recent votes from API..."
+    Populator.populate(:votes)
+  end
+end
+
+namespace :followup do
+  desc "Send notification by email about recent votes"
+  task :email do
+    # TODO: write this task
+  end
+
+  desc "Send notification by text about recent votes"
+  task :text do
+    # TODO: write this task
+  end
+end
+
 task :default  => :spec

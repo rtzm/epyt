@@ -23,7 +23,7 @@ As a user, I can...
   * Make SunlightService method able to pull in votes information and send that to Twilio module
   * set chronjob to do this regularly
 * deploy to Heroku
-* Improve some of the content (sample script, etc) and bring in a little more content area expertise about how votes are scheduled
+* Improve some of the content (sample script, etc) and bring in a little more content area expertise about how votes are scheduled and how to improve this part of the process
 
 ### Stretches and additional features
 * Get more information about the issue from like a NY Times API call

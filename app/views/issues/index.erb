@@ -1,5 +1,4 @@
 <div class="issues-list">
-  <p>Give a shit.</p>
   <% @issues.each do |issue| %>
     <p><%= issue.display_legislative_day %> - <a href="/issues/<%= issue.id %>"><%= issue.bill_number %></a> will be voted in the <%= issue.chamber %>: <%= issue.description %></p>
   <% end %>
